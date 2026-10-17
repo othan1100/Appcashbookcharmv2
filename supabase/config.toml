@@ -1,0 +1,12 @@
+project_id = "bnqdyegcqbwezggavmvt"
+
+[functions.send-email]
+# Called both by the app (JWT checked in code) and by the Supabase Auth
+# "Send Email" hook, which sends a webhook signature instead of a JWT.
+verify_jwt = false
+
+[functions.whop-webhook]
+verify_jwt = false
+
+[functions.sifalo-webhook]
+verify_jwt = false

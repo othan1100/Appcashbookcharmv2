@@ -1,0 +1,3 @@
+UPDATE public.pricing_plans SET monthly_price=9, yearly_price=86.40, yearly_discount_pct=20, updated_at=now() WHERE id='pro';
+UPDATE public.pricing_plans SET monthly_price=19.99, yearly_price=191.90, yearly_discount_pct=20, updated_at=now() WHERE id='team';
+INSERT INTO public.app_settings (id, support_whatsapp, support_email, updated_at) VALUES (1, '+252619172003', 'info.support@cashbookcharm.com', now()) ON CONFLICT (id) DO UPDATE SET support_whatsapp=EXCLUDED.support_whatsapp, support_email=EXCLUDED.support_email, updated_at=now();
